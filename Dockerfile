@@ -5,9 +5,7 @@ EXPOSE 1080
 
 #RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories
 
-RUN apk add -q --progress --no-cache --update openvpn dante-server wget ca-certificates unzip curl
-
-RUN apk add -q --progress --no-cache --update --repository http://nl.alpinelinux.org/alpine/v3.19/main openssl=3.1.7-r1
+RUN apk add -q --progress --no-cache --update openvpn dante-server wget ca-certificates unzip curl openssl
 
 RUN mkdir -p /openvpn/
 
